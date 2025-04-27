@@ -1,36 +1,31 @@
 // @ts-check
 // `@type` JSDoc annotations allow editor autocompletion and type checking
 // (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {
-  themes as prismThemes
-} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'zigdocs',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'The Ultimate Zig Programming Guide',
   favicon: 'img/favicon.ico',
 
-  // Set the production url of your site here
+  // Set the production URL of your site here
   url: 'https://nandisomnath.github.io',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  // The path under which your site is served
   baseUrl: '/zigdocs/',
 
   // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'nandisomnath', // Usually your GitHub org/user name.
-  projectName: 'zigdocs', // Usually your repo name.
+  organizationName: 'nandisomnath', // Your GitHub org/user name.
+  projectName: 'zigdocs', // Your repo name.
+
+  // Deployment branch and settings for GitHub Pages
+  deploymentBranch: 'gh-pages',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
+  // Internationalization settings
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -40,7 +35,7 @@ const config = {
     src: '//gc.zgo.at/count.js',
     async: true,
     "data-goatcounter": "https://ziglearn.goatcounter.com/count",
-  },],
+  }],
 
   plugins: [
     [require.resolve('docusaurus-lunr-search'), {
@@ -52,6 +47,7 @@ const config = {
       ],
     }]
   ],
+
   presets: [
     [
       'classic',
@@ -59,11 +55,9 @@ const config = {
       ({
         docs: {
           includeCurrentVersion: false,
-          routeBasePath: '/', // Serve the docs at the site's root
+          routeBasePath: '/', // Serve docs at the site's root
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/nandisomnath/zigdocs/tree/master/website/',
+          editUrl: 'https://github.com/nandisomnath/zigdocs/tree/master/website/', // Edit link for docs
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
           lastVersion: "0.14",
@@ -97,9 +91,7 @@ const config = {
         blog: {
           routeBasePath: 'posts',
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/nandisomnath/zigdocs/tree/master/website/',
+          editUrl: 'https://github.com/nandisomnath/zigdocs/tree/master/website/', // Edit link for blog posts
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
         },
@@ -121,9 +113,9 @@ const config = {
       metadata: [{
         name: 'keywords',
         content: 'programming, zig, guide, tutorial, ziglang, learn, ziglearn, language, install, book'
-      },],
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      }],
+      image: 'img/docusaurus-social-card.jpg', // Social card image
+
       navbar: {
         title: 'zig.guide',
         logo: {
@@ -158,6 +150,7 @@ const config = {
         },
         ],
       },
+
       footer: {
         style: 'dark',
         links: [{
@@ -175,8 +168,9 @@ const config = {
             href: 'https://github.com/sponsors/Sobeston',
           },
           ],
-        },],
+        }],
       },
+
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
@@ -196,10 +190,10 @@ const config = {
             start: 'hide-start',
             end: 'hide-end'
           },
-        }
-        ],
+        }],
       },
     }),
+
 };
 
 export default config;
