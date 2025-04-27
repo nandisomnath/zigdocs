@@ -24,23 +24,43 @@ jobs:
           zig version
           zig build test --summary all
 
-  docusaurus-build:
+  docusaurus-build-and-deploy:
     runs-on: ubuntu-latest
-    name: docusaurus build
-
+    name: Build and Deploy Docusaurus to GitHub Pages
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v4.1.0
         with:
           node-version: "23"
 
-      - name: "npm install"
+      - name: Install dependencies
         run: npm install
         working-directory: website
 
-      - name: "npm run build"
+      - name: Build website
         run: npm run build
         working-directory: website
 
-      - name: "Verify built site"
-        run: test website/build
+      - name: Upload built site
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: website/build
+
+  deploy:
+    needs: docusaurus-build-and-deploy
+    runs-on: ubuntu-latest
+    name: Deploy to GitHub Pages
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
