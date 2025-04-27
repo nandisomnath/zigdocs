@@ -63,7 +63,7 @@ const config = {
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/Sobeston/zig.guide/tree/master/website/',
+          editUrl: 'https://github.com/nandisomnath/zigdocs/tree/master/website/',
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
           lastVersion: "0.14",
@@ -99,7 +99,7 @@ const config = {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/Sobeston/zig.guide/tree/master/website/',
+          editUrl: 'https://github.com/nandisomnath/zigdocs/tree/master/website/',
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
         },
