@@ -10,20 +10,20 @@ import {
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'zig.guide',
+  title: 'zigdocs',
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://zig.guide',
+  url: 'https://nandisomnath.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/zigdocs/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'sobeston', // Usually your GitHub org/user name.
-  projectName: 'zig.guide', // Usually your repo name.
+  organizationName: 'nandisomnath', // Usually your GitHub org/user name.
+  projectName: 'zigdocs', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -147,7 +147,7 @@ const config = {
           value: '<a rel="me" href="https://hachyderm.io/@sobeston" style="display: none;">Mastodon</a>',
         },
         {
-          href: 'https://github.com/sobeston/zig.guide',
+          href: 'https://github.com/nandisomnath/zigdocs',
           label: 'GitHub',
           position: 'right',
         },
@@ -164,7 +164,7 @@ const config = {
           title: 'Community',
           items: [{
             label: 'GitHub',
-            href: 'https://github.com/sobeston/zig.guide',
+            href: 'https://github.com/nandisomnath/zigdocs',
           },
           {
             label: 'Mastodon',
